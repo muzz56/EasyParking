@@ -11,7 +11,7 @@ import FirebaseFirestoreSwift
 struct Park:Codable {
     @DocumentID var id:String?
     var user: String
-    var carPlate: String
+    var carPlate: String = UserDefaults.standard.string(forKey: "plate") ?? ""
     var buildindCode: String
     var suitHost: String
     var parkingLocation: String

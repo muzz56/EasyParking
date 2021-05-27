@@ -27,11 +27,16 @@ class HistoryParkViewController: UIViewController {
         self.tableParkingView.dataSource = self
         self.tableParkingView.rowHeight = 150
         
-        self.fetchParking()  // WOM Select .where(user)
+//        self.fetchParking()  // WOM Select .where(user)
         
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        self.fetchParking()
+    }
+    
     func fetchParking() {
+        listParking.removeAll()
         let currentUser = defaults.value(forKey: "user") as! String
         db.collection("parking")
             .whereField("user", isEqualTo: currentUser)
@@ -85,6 +90,7 @@ extension HistoryParkViewController: UITableViewDelegate, UITableViewDataSource 
         let cell = tableParkingView.dequeueReusableCell(withIdentifier: "parkCell") as? HistoryParkTableViewCell
 
         if cell != nil {
+            //cell?.lblCarPlate.text = "Car Plate Number : \(String(listParking[indexPath.row].carPlate))"
             cell?.lblCarPlate.text = "Car Plate Number : \(String(listParking[indexPath.row].carPlate))"
             cell?.lblAddress.text = "\(listParking[indexPath.row].parkingLocation)"
             cell?.lblHours.text = "Park \(String(listParking[indexPath.row].numberHours)) hours"

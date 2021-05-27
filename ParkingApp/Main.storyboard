@@ -511,7 +511,7 @@
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="21.5" id="a5Q-BO-P5W"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" systemColor="systemIndigoColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -521,7 +521,7 @@
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="36" id="7rV-ju-LqP"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                     <color key="textColor" red="0.52818943299999999" green="0.038216748199999998" blue="0.16578631699999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -530,7 +530,7 @@
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="21" id="1we-Xj-yUP"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" systemColor="systemIndigoColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -539,7 +539,7 @@
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="21.5" id="1Ts-bC-yWQ"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" systemColor="systemIndigoColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -694,13 +694,12 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hrt-w7-tXg">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hrt-w7-tXg">
                                 <rect key="frame" x="100" y="729" width="214" height="34"/>
                                 <color key="backgroundColor" systemColor="systemRedColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="34" id="Uek-EL-n7V"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <state key="normal" title="Delete Profile">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -775,7 +774,7 @@
                             <constraint firstItem="EqM-wS-9jN" firstAttribute="leading" secondItem="sSY-CI-FSJ" secondAttribute="leading" constant="50" id="zdf-Iv-1sJ"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Profile" image="person" catalog="system" id="R45-zo-SWJ"/>
+                    <tabBarItem key="tabBarItem" title="Profile" image="person.fill.badge.plus" catalog="system" id="R45-zo-SWJ"/>
                     <navigationItem key="navigationItem" title="Update Profile" id="c8C-xG-i8D"/>
                     <connections>
                         <outlet property="tfCarPlateNumber" destination="EiS-y0-CJH" id="o1H-I4-33D"/>
@@ -925,6 +924,9 @@
                             <constraint firstItem="Oa5-f8-aXF" firstAttribute="trailing" secondItem="f8Q-VT-9bx" secondAttribute="trailing" constant="20" id="wep-mK-urB"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="mapParkView" destination="f8Q-VT-9bx" id="AZH-HO-mfo"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hzx-g5-GuD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -934,7 +936,7 @@
     <resources>
         <image name="car" catalog="system" width="128" height="93"/>
         <image name="car.2" catalog="system" width="128" height="72"/>
-        <image name="person" catalog="system" width="128" height="117"/>
+        <image name="person.fill.badge.plus" catalog="system" width="128" height="124"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

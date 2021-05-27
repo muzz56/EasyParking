@@ -133,6 +133,8 @@ class EditViewController: UIViewController {
             "Car Plate Number":carPlateNo
 
         ]
+        UserDefaults.standard.set(carPlateNo, forKey: "plate")
+        //currentPlate = defaults.value(forKey: "plate") as! String
 
         db.collection("users").document(userId).updateData(user) { (error) in
             if let err = error {

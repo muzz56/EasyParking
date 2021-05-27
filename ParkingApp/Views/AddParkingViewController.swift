@@ -42,6 +42,7 @@ class AddParkingViewController: UIViewController, UIPickerViewDelegate, UIPicker
         self.txAddress.delegate = self
 
         currentUser = defaults.value(forKey: "user") as! String
+//        self.defaults.set(self.currentPlate, forKey: "plate")
         currentPlate = defaults.value(forKey: "plate") as! String
         carPlate.text = "Car Plate: \(currentPlate)"
     }
@@ -109,6 +110,9 @@ class AddParkingViewController: UIViewController, UIPickerViewDelegate, UIPicker
     func insertParking(lat:Double, lng:Double){
         isCurrentLocation = false
         
+//        self.defaults.set(self.currentPlate, forKey: "plate")
+//        currentPlate = defaults.value(forKey: "plate") as! String
+//
         let parkingToAdd = Park(id: nil, user: currentUser, carPlate: currentPlate, buildindCode: txBuildingCode.text!, suitHost: txSlot.text!, parkingLocation: txAddress.text!, numberHours: selHours, dateTime: Date())
 
             addParking(parking: parkingToAdd)
